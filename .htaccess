@@ -10,6 +10,7 @@
         # Internally rewrite /wp/*.php|html|txt files as /*.php|html|txt
         RewriteCond %{REQUEST_URI} ^/(.*)\.(php|html|txt)$
         RewriteCond %{REQUEST_URI} !^/wp/.*$
+        RewriteCond %{REQUEST_URI} !^/content/.*$
         RewriteRule ^(.*)$ /wp/$1 [L]
 
         # Internally rewrite /wp/wp-admin as /wp-admin
